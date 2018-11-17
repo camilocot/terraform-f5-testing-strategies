@@ -1,0 +1,6 @@
+pip==18.1
+ply==3.10
+pyhcl==0.3.10
+setuptools==40.6.2
+terraform-validate==2.8.0
+wheel==0.32.2
