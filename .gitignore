@@ -10,3 +10,6 @@
 
 # crash reports
 crash.log
+
+# terratest state
+**/.test_data/*
