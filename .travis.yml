@@ -7,6 +7,10 @@ language: go
 go:
   - "1.10.1"
 
+before_install:
+- wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip -O /tmp/terraform.zip
+- sudo unzip -d /usr/local/bin/ /tmp/terraform.zip
+
 before_script:
 - make deps
 
