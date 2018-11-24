@@ -1,0 +1,29 @@
+dist: trusty
+sudo: required
+services:
+- docker
+language: go
+
+go:
+  - "1.10.1"
+
+before_script:
+- make deps
+
+script:
+- make test
+
+branches:
+  only:
+  - master
+
+matrix:
+  fast_finish: true
+  allow_failures:
+  - go: tip
+
+after_success:
+- echo 'Unit tests passed'
+
+after_failure:
+- echo 'Unit tests failed'
